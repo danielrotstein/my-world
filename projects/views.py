@@ -21,3 +21,14 @@ def project_list_view(request):
     context = {"project_list": project_list}
 
     return render(request, "projects/list.html", context)
+
+
+# ----------- Project Detail View --------------------------
+
+
+@login_required()
+def project_detail_view(request, pk):
+    project_detail = Project.objects.get(pk=pk)
+    context = {"project_detail": project_detail}
+
+    return render(request, "projects/detail.html", context)
