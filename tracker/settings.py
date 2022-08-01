@@ -30,9 +30,10 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# ----------- Login Redirect ------------------------------------
+# ----------- Login & Logout Redirect ------------------------------------
 
 LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "login"
 
 
 # Application definition
