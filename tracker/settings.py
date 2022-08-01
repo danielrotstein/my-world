@@ -30,6 +30,11 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+# ----------- Login Redirect ------------------------------------
+
+LOGIN_REDIRECT_URL = "home"
+
+
 # Application definition
 
 INSTALLED_APPS = [
