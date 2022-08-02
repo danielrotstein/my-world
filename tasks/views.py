@@ -1,26 +1,22 @@
 from django.shortcuts import render, redirect
-from django.urls import reverse_lazy
-
 
 # Models
 from tasks.models import Task
 
 
 # Forms
-from tasks.forms import TaskCreateForm
+from tasks.forms import (
+    TaskCreateForm,
+    TaskUpdateForm
+)
 
 
 # Login Required
 from django.contrib.auth.decorators import login_required
 
 
-# POST Requests
-from django.views.decorators.http import require_http_methods
-
-
-
-
 # Create your views here.
+
 
 # ------------ Task List View -------------------------
 
@@ -57,22 +53,21 @@ def task_create_view(request):
 
 # ------------ Task Update View -------------------------
 
-@require_http_methods(["POST"])
-def task_update_view(request):
-    # Try working with this one
-    # task_update = Task.objects.get(is_completed="True")
+def task_update_view(request, pk):
+    task = Task.objects.get(pk=pk)
+    if request.method == "POST":
+        form = TaskUpdateForm(request.POST, instance=task)
+        if form.is_valid():
+            task = form.save(commit=False)
+            task.is_completed = True
+            task.save()
+            return redirect("show_my_tasks")
 
-    is_completed = request.POST.get("is_completed")
-    completed = Task.objects.get(id=is_completed)
-    # assignee = request.user
+    else:
+        form = TaskUpdateForm(instance=task)
 
-    try:
-        Task.objects.update(
-            is_completed=completed,
-            # assignee=assignee,
-        )
+    context = {
+        "form": form
+    }
 
-    except Exception as error:
-        raise error
-
-    return redirect("show_my_tasks", pk=is_completed.id)
+    return context

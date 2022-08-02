@@ -40,6 +40,7 @@ def project_detail_view(request, pk):
 
 # ----------- Project Create View --------------------------
 
+
 @login_required()
 def project_create_view(request):
     if request.method == "POST":
