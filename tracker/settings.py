@@ -35,10 +35,12 @@ ALLOWED_HOSTS = []
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "login"
 
+# -------------------------------------------------------------------------
 
 # Application definition
 
 INSTALLED_APPS = [
+    'markdownify.apps.MarkdownifyConfig',
     "tasks.apps.TasksConfig",
     "projects.apps.ProjectsConfig",
     "accounts.apps.AccountsConfig",
@@ -132,3 +134,12 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+
+# ------ Disable sanitation (bleach) ------------------------------
+MARKDOWNIFY = {
+    "default": {
+        "BLEACH": False
+    }
+}

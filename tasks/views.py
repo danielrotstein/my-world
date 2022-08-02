@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
 
 
 # Models
@@ -56,12 +57,13 @@ def task_create_view(request):
 
 # ------------ Task Update View -------------------------
 
-
 @require_http_methods(["POST"])
-def task_update_view(request, pk):
+def task_update_view(request):
+    # Try working with this one
     # task_update = Task.objects.get(is_completed="True")
+
     is_completed = request.POST.get("is_completed")
-    completed = Task.objects.get(is_completed="True")
+    completed = Task.objects.get(id=is_completed)
     # assignee = request.user
 
     try:
@@ -73,35 +75,4 @@ def task_update_view(request, pk):
     except Exception as error:
         raise error
 
-    return redirect("show_my_tasks")
-
-
-
-
-
-
-
-
-
-
-
-# @require_http_methods(["POST"])
-# def task_update_view(request):
-#     # Try working with this one
-#     # task_update = Task.objects.get(is_completed="True")
-
-
-#     is_completed = request.POST.get("is_completed")
-#     completed = Task.objects.get(id=is_completed)
-#     # assignee = request.user
-
-#     try:
-#         Task.objects.update(
-#             is_completed=completed,
-#             # assignee=assignee,
-#         )
-
-#     except Exception as error:
-#         raise error
-
-#     return redirect("show_my_tasks", pk=is_completed.id)
+    return redirect("show_my_tasks", pk=is_completed.id)
