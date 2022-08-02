@@ -16,6 +16,18 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 
+# ------------ Task List View -------------------------
+
+@login_required()
+def task_list_view(request):
+    task_list = Task.objects.filter(assignee=request.user)
+    context = {
+        "task_list": task_list
+    }
+
+    return render(request, "tasks/list.html", context)
+
+
 # ------------ Task Create View -------------------------
 
 @login_required()
