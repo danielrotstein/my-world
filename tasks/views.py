@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 
+
 # Models
 from tasks.models import Task
 
