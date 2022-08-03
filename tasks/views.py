@@ -7,7 +7,7 @@ from tasks.models import Task
 # Forms
 from tasks.forms import (
     TaskCreateForm,
-    TaskUpdateForm
+    TaskUpdateForm,
 )
 
 
@@ -53,8 +53,9 @@ def task_create_view(request):
 
 # ------------ Task Update View -------------------------
 
+@login_required()
 def task_update_view(request, pk):
-    task = Task.objects.get(pk=pk)
+    task = Task.objects.get(id=pk)
     if request.method == "POST":
         form = TaskUpdateForm(request.POST, instance=task)
         if form.is_valid():
@@ -70,4 +71,15 @@ def task_update_view(request, pk):
         "form": form
     }
 
-    return context
+    return render(request, "tasks/list.html", context)
+
+
+# class UpdatedView(UpdateView):
+#     model = ....
+#     template_name = "fgdgfg"
+#     fields = [
+#         "mane",
+#     ]
+
+#     def form_valid(self, request):
+#         form.is_valid()
