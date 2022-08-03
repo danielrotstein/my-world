@@ -40,7 +40,7 @@ LOGOUT_REDIRECT_URL = "login"
 # Application definition
 
 INSTALLED_APPS = [
-    'markdownify.apps.MarkdownifyConfig',
+    "markdownify.apps.MarkdownifyConfig",
     "tasks.apps.TasksConfig",
     "projects.apps.ProjectsConfig",
     "accounts.apps.AccountsConfig",
@@ -136,10 +136,5 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-
-# ------ Disable sanitation (bleach) ------------------------------
-MARKDOWNIFY = {
-    "default": {
-        "BLEACH": False
-    }
-}
+# ------ Disable sanitation (bleach) -----------------------------------------
+MARKDOWNIFY = {"default": {"BLEACH": False}}
