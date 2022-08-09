@@ -4,5 +4,5 @@ from intro.views import intro_list_view
 
 
 urlpatterns = [
-    path("", intro_list_view, name="intro"),
+    path("", intro_list_view, name="home"),
 ]
