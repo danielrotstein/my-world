@@ -28,9 +28,10 @@ urlpatterns = [
     path("projects/", include("projects.urls")),
     path(
         "",
-        RedirectView.as_view(url=reverse_lazy("list_projects")),
+        RedirectView.as_view(url=reverse_lazy("intro")),
         name="home",
     ),
     path("accounts/", include("accounts.urls")),
     path("tasks/", include("tasks.urls")),
+    path("intro/", include("intro.urls")),
 ]

@@ -40,6 +40,7 @@ LOGOUT_REDIRECT_URL = "login"
 # Application definition
 
 INSTALLED_APPS = [
+    'intro.apps.IntroConfig',
     "markdownify.apps.MarkdownifyConfig",
     "tasks.apps.TasksConfig",
     "projects.apps.ProjectsConfig",

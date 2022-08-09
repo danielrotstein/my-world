@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(243, 249, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+td,
+th {
+    color: #000000;
+}
+
+nav,
+ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
