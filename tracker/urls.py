@@ -34,4 +34,5 @@ urlpatterns = [
     path("accounts/", include("accounts.urls")),
     path("tasks/", include("tasks.urls")),
     path("home/", include("intro.urls")),
+    path("interests/", include("interests.urls")),
 ]
