@@ -3,12 +3,22 @@
     <main>
         <div>
             <h1>What I'm interested in</h1>
-            {% for interest in interest_list.all %}
-                <h2>{{ interest.name }}</h2>
-                <h4>{{ interest.description }}</h4>
-                <p>by: {{ interest.author }}</p>
-                <p>If you want to read more about scuba diving and the fascinating underwater world, click here: ''''</p>
-            {% endfor %}
+            <a href="{% url 'interest_create' %}">Create a new Interest</a>
+            <div>
+                <table>
+                    <thead>
+                        {% for interest in interest_list.all %}
+                            <tr>
+                                <td>
+                                    <a href="{% url 'interest_detail' interest.pk %}">
+                                        <h2>{{ interest.name }}</h2>
+                                    </a>
+                                {% endfor %}
+                            </td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
         </div>
     </main>
 {% endblock content %}
