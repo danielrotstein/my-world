@@ -40,19 +40,49 @@ footer {
 }
 
 
-.table {
-    display: flex;
-    justify-content: center;
-    row-gap: 100px;
+
+
+
+.tasks-projects-table {
+    margin: 50px 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 75%;
 }
 
-.locations {
-    display: flex;
-    gap: 50px;
-    align-content: stretch;
-
-
+.tasks-projects-table thead tr {
+    background-color: rgb(192, 229, 248);
+    color: #ffffff;
+    text-align: left;
 }
+
+.tasks-projects-table th,
+.tasks-projects-table td {
+    padding: 12px 15px;
+}
+
+
+
+
+.locations-table {
+    margin: 50px 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 150%;
+}
+
+.locations-table thead tr {
+    background-color: rgb(192, 229, 248);
+    color: white;
+    text-align: left;
+}
+
+.locations-table th,
+.locations-table td {
+    padding: 12px 15px;
+}
+
+
+
+
 
 
 .container {
@@ -107,6 +137,9 @@ a:visited {
     text-decoration: underline;
     color: blue;
 }
+
+
+
 
 
 

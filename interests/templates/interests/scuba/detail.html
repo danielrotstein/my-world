@@ -15,17 +15,17 @@
             {% endif %}
         </div>
     </br>
-    <div class="table">
-        <table>
+    <div>
+        <table class="locations-table">
             <thead>
-                <tr class="locations">
+                <tr>
                     <th>Location</th>
                     <th>Description</th>
                 </tr>
             </thead>
             <tbody>
                 {% for place in scuba_detail %}
-                    <tr class="locations">
+                    <tr>
                         <td>{{ place.location }}</td>
                         <td>{{ place.description }}</td>
                     </tr>
