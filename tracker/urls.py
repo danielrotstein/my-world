@@ -35,4 +35,5 @@ urlpatterns = [
     path("tasks/", include("tasks.urls")),
     path("home/", include("intro.urls")),
     path("interests/", include("interests.urls")),
+    path("", include("scuba_diving.urls")),
 ]

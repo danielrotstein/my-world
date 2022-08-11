@@ -1,7 +1,19 @@
 body {
     background-color: rgb(243, 249, 255);
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    flex-grow: 1;
 }
+
+a {
+    text-decoration: none;
+}
+
 
 h1,
 td,
@@ -11,13 +23,88 @@ th {
 
 nav,
 ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
 }
+
+footer {
+    display: flex;
+    position: relative;
+    margin-top: auto;
+    width: 100%;
+    justify-content: center;
+    background-color: rgb(192, 229, 248);
+    margin-top: auto;
+}
+
+
+.table {
+    display: flex;
+    justify-content: center;
+    row-gap: 100px;
+}
+
+.locations {
+    display: flex;
+    gap: 50px;
+    align-content: stretch;
+
+
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.abc1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    color: white;
+    background-image: url(https://www.azocleantech.com/images/Article_Images/ImageForArticle_1488_1648120481674247.jpg);
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.abc2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    color: white;
+    background-image: url(https://entertainment.time.com/wp-content/uploads/sites/3/2011/07/06_top10sundancehits.jpg?w=720&h=480&crop=1);
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.abc3 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    color: white;
+    background-image: url(https://journalhotels.com/wp-content/uploads/2016/09/765341-disc-dj-mixer-music-record-retro-sound-vinyl.jpg);
+    background-size: cover;
+    border-radius: 20px;
+}
+
+
+
 
 a:visited {
     text-decoration: none;
+    text-decoration: underline;
     color: blue;
 }
 

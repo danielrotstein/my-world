@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block content %}
+    <main>
+        <div>
+            <h1>Scuba Diving</h1>
+            <h4>
+                <i>"Dive into the fascinating underwater world."</i>
+            </h4>
+        </div>
+        <div>
+            <a href="{% url 'interest_list' %}">
+                <button>Back</button>
+            </a>
+        </div>
+    </br>
+    <div>
+        <img src="https://www.bluewaterdivetravel.com/images/best-diving-in-caribbean-curacao.jpg"
+             width="800"/>
+    </div>
+    <div id="Why you should try scuba diving?"/>
+    <h2>Why you should try scuba diving?</h2>
+    <p>
+        Becoming a scuba diver is kind of like getting inducted into an elite club. Regardless of race, religion and creed, divers from all walks of life share a camaraderie and common ground from which friendships and conversations have sprung where they normally wouldn't.
+    </p>
+    <p>
+        Why? Because divers normally share similar interest in the beauty of nature and . . . let's face it you need be somewhat brazen to face the risks of breathing through a tube at the bottom of the ocean, lake or river.
+    </p>
+    <p>
+        Most people find this concept a little scary. Breathing compressed air at most depths means you can't just come up for air if something goes wrong. Additionally, when you tell a non-diver you scuba dive its common to hear “You're not scared of sharks?” It's a common and culturally re-enforced notion that an oversized and unforeseen sea creature will gobble you up when you're least suspecting.
+        But that's not true at all, most sea creatures are so afraid of scuba divers, it's considered lucky if wou're able to see any sharks on a dive trip.
+    </p>
+</br>
+<h2>Equipment</h2>
+<p>
+    Learn more about the <a href="{% url 'equipment_list' %}">equipment</a> needed to scuba dive.
+</p>
+</br>
+<h2>Locations</h2>
+<p>
+    There are many different places in the world for scuba diving, everywhere there's water there's probably an opportunaity to scuba. From tropical islands to your friendly hometown lakes, or rivers, there's a dive site for everybody.
+</p>
+<p>Check out the following dive places for more info:</p>
+<ul>
+    {% for place in scuba_list.all %}
+        <a href="{% url 'scuba_detail' place.pk %}">
+            <li>{{ place.location }}</li>
+        </a>
+    {% endfor %}
+</ul>
+</br>
+<div>
+    <h2>
+        <a id="The 18 Best Places to Scuba Dive in 2022">The 18 Best Places to Scuba Dive in 2022</a>
+    </h2>
+    <p>
+        You can dive just about anywhere there's water. You don't have to travel far in order to enjoy scuba diving. But seeking out the best dive sites in the world gives you two incredible experiences at once, as you combine the joy of travel with the joy of diving.
+        No guide could ever encompass every great dive out there. The world is too big to be catalogued in an article, and too full of beauty and opportunity to sum it up in a best-of list.
+    </br>
+    But <em><strong>these</strong></em> scuba diving destinations are some of the best places for diving we've found, and they're worth checking out.
+</p>
+<a href="https://www.boatsafe.com/best-places-to-scuba-dive/"
+   target="_blank">
+    <img src="https://www.thoughtco.com/thmb/IxJUppm1UaJGoTMLjC54-clZpc8=/4961x2791/smart/filters:no_upscale()/world-in-geographic-projection-true-colour-satellite-image-99151124-58b9cc3e5f9b58af5ca7578d.jpg"
+         width="450"
+         alt="the world"/>
+</a>
+<p>click the world map for the TOP 18 places to scuba dive in 2022</p>
+</div>
+</main>
+{% endblock content %}

@@ -57,13 +57,3 @@ def interest_create_view(request):
 
 
 
-# -------- Equipment ---------------------------
-# -------- Interest Detail View ----------------
-
-def equipment_detail_view(request, pk):
-    equipment_detail = Interest.objects.get(pk=pk)
-    context = {
-        "equipment_detail": equipment_detail
-    }
-
-    return render(request, "interests/equipment.html", context)

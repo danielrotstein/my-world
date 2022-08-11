@@ -3,21 +3,15 @@
     <main>
         <div>
             <h1>What I'm interested in</h1>
-            <a href="{% url 'interest_create' %}">Create a new Interest</a>
-            <div>
-                <table>
-                    <thead>
-                        {% for interest in interest_list.all %}
-                            <tr>
-                                <td>
-                                    <a href="{% url 'interest_detail' interest.pk %}">
-                                        <h2>{{ interest.name }}</h2>
-                                    </a>
-                                {% endfor %}
-                            </td>
-                        </tr>
-                    </thead>
-                </table>
+            {% if user.is_staff %}
+                <a href="{% url 'interest_create' %}">Create a new Interest</a>
+            {% endif %}
+            <div class="container">
+                <a href="{% url 'scuba_list' %}">
+                    <h2 class="abc1">Scuba Diving</h2>
+                </a>
+                <h2 class="abc2">Movies</h2>
+                <h2 class="abc3">Music</h2>
             </div>
         </div>
     </main>

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+    <main>
+        <div>
+            <h1>Locations</h1>
+            <div>
+                <a href="{% url 'scuba_list' %}">
+                    <button>Back</button>
+                </a>
+            </div>
+        </br>
+        <div>
+            {% if user.is_staff %}
+                <a href="{% url 'scuba_create' %}">Create a new Location</a>
+            {% endif %}
+        </div>
+    </br>
+    <div class="table">
+        <table>
+            <thead>
+                <tr class="locations">
+                    <th>Location</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for place in scuba_detail %}
+                    <tr class="locations">
+                        <td>{{ place.location }}</td>
+                        <td>{{ place.description }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+</main>
+{% endblock content %}

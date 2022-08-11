@@ -2,33 +2,36 @@
 {% block content %}
     <main>
         <div>
-            <h1>My Blog</h1>
+            <h1>Daniel's World</h1>
             {% for item in intro_list.all %}<p>created on: {{ item.created_on|date }} // by: Daniel Rotstein</p>{% endfor %}
         </br>
-        <h4>
-            My name is Daniel Rotstein and Im an aspiring Software Engineer currently enrolled in a bootcamp at Hack Reactor, and this is my first introduction to a running application using knowledge of Django, Python, HTML and CSS.
-        </h4>
+        <div>
+        </img src="danielPic.jpg">
     </div>
-    <h5>
-        <i>Some motivation points why changing my carrer to the amazing world of computer science:</i>
-    </h5>
-    <div>
-        <p>
-            I speak 4 languages and I've spent much of my life traveling. Knowing different languages has always allowed me to connect with people, experiences and places in unique and special ways. As I look towards my personal future and the next 30 years, I believe computer languages are the way of the world's future and knowing these languages will expand my ability to connect with new people and experiences as technology advances.
-        </p>
-        <p>I have family and friends all over the world. I was born in Switzerland and now live in the U.S..</p>
-        <p>
-            As a software engineer, I would be able to work anywhere, in any industry world wide which may give me more flexibility and allow the possibility of living closer to family. Whenever I look at job posts for companies, I see the majority of them are looking for engineers - the job opportunities are only growing, and the learning process never ends (which I enjoy) and computer languages are always evolving.
-        </p>
-    </div>
-    <h5>
-        <i>What you will encounter on this blog:</i>
-    </h5>
-    <div>
-        <p>
-            I would like to share my personal <a href="{% url 'interest_list' %}">interests</a>
-            with all of you, in my opinion thats a great introduction to learn to know someone, and who knows, maybe we share the same interests.
-        </p>
-    </div>
+    <h4>
+        My name is Daniel Rotstein and Im an aspiring Software Engineer currently enrolled in a bootcamp at Hack Reactor, and this is my first introduction to a running application using knowledge of Django, Python, HTML and CSS.
+    </h4>
+</div>
+<h5>
+    <i>Some motivation points why changing my carrer to the amazing world of computer science:</i>
+</h5>
+<div>
+    <p>
+        I speak 4 languages and I've spent much of my life traveling. Knowing different languages has always allowed me to connect with people, experiences and places in unique and special ways. As I look towards my personal future and the next 30 years, I believe computer languages are the way of the world's future and knowing these languages will expand my ability to connect with new people and experiences as technology advances.
+    </p>
+    <p>I have family and friends all over the world. I was born in Switzerland and now live in the U.S..</p>
+    <p>
+        As a software engineer, I would be able to work anywhere, in any industry world wide which may give me more flexibility and allow the possibility of living closer to family. Whenever I look at job posts for companies, I see the majority of them are looking for engineers - the job opportunities are only growing, and the learning process never ends (which I enjoy) and computer languages are always evolving.
+    </p>
+</div>
+<h5>
+    <i>What you will encounter on this blog:</i>
+</h5>
+<div>
+    <p>
+        I would like to share my personal <a href="{% url 'interest_list' %}">interests</a>
+        with all of you, in my opinion thats a great introduction to learn to know someone, and who knows, maybe we share the same interests.
+    </p>
+</div>
 </main>
 {% endblock content %}
