@@ -1,3 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
+    <main>
+        <div>
+            <h1>Movies</h1>
+            <h4>
+                <i>"Some of my favorite movies - who doesn't like movies, right?!"</i>
+            </h4>
+        </div>
+        <div>
+            <a href="{% url 'interest_list' %}">
+                <button>Back</button>
+            </a>
+        </div>
+    </br>
+    <div class="movies_container">
+        {% for movie in movies_list.all %}
+            {% if movie.image %}<img src="{{ movie.image }}" width="200">{% endif %}
+        {% endfor %}
+    </div>
+</main>
 {% endblock content %}

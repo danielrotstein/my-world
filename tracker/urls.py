@@ -36,4 +36,5 @@ urlpatterns = [
     path("home/", include("intro.urls")),
     path("interests/", include("interests.urls")),
     path("", include("scuba_diving.urls")),
+    path("", include("movies.urls")),
 ]

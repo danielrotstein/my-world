@@ -3,16 +3,16 @@
     <main>
         <div>
             <h1>What I'm interested in</h1>
-            {% if user.is_staff %}
-                <a href="{% url 'interest_create' %}">Create a new Interest</a>
-            {% endif %}
-            <div class="container">
-                <a href="{% url 'scuba_list' %}">
-                    <h2 class="abc1">Scuba Diving</h2>
-                </a>
+        </br>
+        <div class="interests_container">
+            <a href="{% url 'scuba_list' %}">
+                <h2 class="abc1">Scuba Diving</h2>
+            </a>
+            <a href="{% url 'movies_list' %}">
                 <h2 class="abc2">Movies</h2>
-                <h2 class="abc3">Music</h2>
-            </div>
+            </a>
+            <h2 class="abc3">Music</h2>
         </div>
-    </main>
+    </div>
+</main>
 {% endblock content %}
