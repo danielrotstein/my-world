@@ -16,7 +16,8 @@ class ScubaDiving(models.Model):
     currency = models.CharField(null=True, max_length=50)
     timezone = models.CharField(null=True, max_length=50)
     best_time = models.TextField(null=True)
-
+    image6 = models.URLField(null=True, blank=True)
+    
     interest = models.ForeignKey(
         "interests.Interest",
         related_name="interests",

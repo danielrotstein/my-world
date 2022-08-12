@@ -76,6 +76,24 @@ footer {
 
 
 
+/* Scuba Detail Locations */
+
+.scuba_detail_images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin-bottom: 100px;
+}
+
+
+
+
+
+
+
+
 /* Scuba Equipment */
 
 .equipment {
@@ -146,7 +164,7 @@ footer {
 
 
 
-/* Scuba Locations Tables */
+/* Scuba Locations Tables 
 
 .locations-table {
     margin: 50px 100px;
@@ -164,16 +182,17 @@ footer {
 .locations-table td {
     padding: 12px 15px;
 }
+*/
 
 
 
-/* Scuba Locations */
+/* Scuba Locations 
 
 .locations-detail {
     display: flex;
     flex-direction: column;
     margin-bottom: 100px;
-}
+} */
 
 
 

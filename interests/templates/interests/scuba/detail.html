@@ -14,7 +14,26 @@
 </div>
 <h1>{{ scuba_detail.location }}</h1>
 {% if scuba_detail.image %}<img src="{{ scuba_detail.image }}" width="300">{% endif %}
+<h3>Overview</h3>
 <p>{{ scuba_detail.description }}</p>
+<h3>Best Time</h3>
+<p>{{ scuba_detail.best_time }}</p>
+<h3>Other Useful Information</h3>
+<p>
+    <b>Languages:</b> {{ scuba_detail.languages }}
+</p>
+<p>
+    <b>Currency:</b> {{ scuba_detail.currency }}
+</p>
+<p>
+    <b>Time Zone:</b> {{ scuba_detail.timezone }}
+</p>
+<div class="scuba_detail_images">
+    {% if scuba_detail.image2 %}<img src="{{ scuba_detail.image2 }}" width="500">{% endif %}
+    {% if scuba_detail.image3 %}<img src="{{ scuba_detail.image3 }}" width="500">{% endif %}
+    {% if scuba_detail.image4 %}<img src="{{ scuba_detail.image4 }}" width="500">{% endif %}
+    {% if scuba_detail.image5 %}<img src="{{ scuba_detail.image5 }}" width="500">{% endif %}
+</div>
 </main>
 {% endblock content %}
 {% comment %} <table class="locations-table">
