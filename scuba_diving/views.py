@@ -29,7 +29,7 @@ def scuba_list_view(request):
 # -------- Scuba Detail View ----------------
 
 def scuba_detail_view(request, pk):
-    scuba_detail = ScubaDiving.objects.all()
+    scuba_detail = ScubaDiving.objects.get(pk=pk)
     context = {
         "scuba_detail": scuba_detail
     }
@@ -45,7 +45,7 @@ def scuba_create_view(request):
         if form.is_valid():
             create = form.save(commit=False)
             create.save()
-            return redirect("scuba_list")
+            return redirect("scuba_detail", create.pk)
 
     else:
         form = ScubaCreateForm()

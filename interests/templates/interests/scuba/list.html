@@ -36,6 +36,12 @@
 </p>
 </br>
 <h2>Locations</h2>
+<div>
+    {% if user.is_staff %}
+        <a href="{% url 'scuba_create' %}">Create a new Location</a>
+    </br>
+{% endif %}
+</div>
 <p>
     There are many different places in the world for scuba diving, everywhere there's water there's probably an opportunaity to scuba. From tropical islands to your friendly hometown lakes, or rivers, there's a dive site for everybody.
 </p>

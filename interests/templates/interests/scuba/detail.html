@@ -1,33 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
     <main>
-        <div>
-            <h1>Locations</h1>
-            <div>
-                <a href="{% url 'scuba_list' %}">
-                    <button>Back</button>
-                </a>
-            </div>
-        </br>
     </br>
-    <div>
-        {% if user.is_staff %}
-            <a href="{% url 'scuba_create' %}">Create a new Location</a>
-        </br>
-    {% endif %}
-</div>
 </br>
-<div class="locations-detail">
-    {% for place in scuba_detail %}
-        <h2>{{ place.location }}</h2>
-        {% if place.image %}<img src="{{ place.image }}" width="80">{% endif %}
-        <p>{{ place.description }}</p>
-        {% if user.is_staff %}
-            <a href="{% url 'scuba_edit' place.pk %}">Edit</a>
-        {% endif %}
-    {% endfor %}
+<div>
+    <div>
+        <a href="{% url 'scuba_list' %}">
+            <button>Back</button>
+        </a>
+    </div>
+</br>
+</br>
 </div>
-</div>
+<h1>{{ scuba_detail.location }}</h1>
+{% if scuba_detail.image %}<img src="{{ scuba_detail.image }}" width="300">{% endif %}
+<p>{{ scuba_detail.description }}</p>
 </main>
 {% endblock content %}
 {% comment %} <table class="locations-table">
@@ -48,3 +35,14 @@
         {% endfor %}
     </tbody>
 </table> {% endcomment %}
+{% comment %} 
+<div class="locations-detail">
+    {% for place in scuba_detail.all %}
+        <h2>{{ place.location }}</h2>
+        {% if place.image %}<img src="{{ place.image }}" width="80">{% endif %}
+        <p>{{ place.description }}</p>
+        {% if user.is_staff %}
+            <a href="{% url 'scuba_edit' place.pk %}">Edit</a>
+        {% endif %}
+    {% endfor %}
+</div> {% endcomment %}
