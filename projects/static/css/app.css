@@ -14,7 +14,6 @@ a {
     text-decoration: none;
 }
 
-
 h1,
 td,
 th {
@@ -41,7 +40,55 @@ footer {
 
 
 
+/* Scuba Equipment */
 
+.equipment {
+    display: flex;
+    justify-content: center;
+}
+
+
+.masks {
+    display: flex;
+    align-items: center;
+    gap: 10px 10px;
+}
+
+
+.suit {
+    display: flex;
+    align-items: center;
+    gap: 10px 10px;
+}
+
+.unit {
+    display: flex;
+    align-items: center;
+    gap: 10px 10px;
+}
+
+.fins {
+    display: flex;
+    align-items: center;
+    gap: 10px 10px;
+}
+
+.watches {
+    display: flex;
+    align-items: center;
+    gap: 10px 10px;
+}
+
+.signaling {
+    display: flex;
+    align-items: center;
+    gap: 10px 10px;
+    margin-bottom: 100px;
+}
+
+
+
+/* Projects & Tasks Tables */
 
 .tasks-projects-table {
     margin: 50px 100px;
@@ -62,6 +109,7 @@ footer {
 
 
 
+/* Scuba Locations Tables */
 
 .locations-table {
     margin: 50px 100px;
@@ -82,8 +130,31 @@ footer {
 
 
 
+/* Scuba Locations */
+
+.locations-detail {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
 
 
+
+/* World Map List View */
+
+.worldmap {
+    margin-bottom: 100px;
+}
+
+.worldmap-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px 10px;
+}
+
+
+
+/* Interests ListView */
 
 .container {
     display: flex;
@@ -91,7 +162,6 @@ footer {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-
 
 .abc1 {
     display: flex;
@@ -131,6 +201,7 @@ footer {
 
 
 
+/* Hyperlink */
 
 a:visited {
     text-decoration: none;
@@ -140,8 +211,7 @@ a:visited {
 
 
 
-
-
+/* Navbar Dropdown */
 
 .navbar {
     overflow: hidden;

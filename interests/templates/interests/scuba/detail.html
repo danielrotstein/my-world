@@ -9,30 +9,42 @@
                 </a>
             </div>
         </br>
-        <div>
-            {% if user.is_staff %}
-                <a href="{% url 'scuba_create' %}">Create a new Location</a>
-            {% endif %}
-        </div>
     </br>
     <div>
-        <table class="locations-table">
-            <thead>
-                <tr>
-                    <th>Location</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for place in scuba_detail %}
-                    <tr>
-                        <td>{{ place.location }}</td>
-                        <td>{{ place.description }}</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
+        {% if user.is_staff %}
+            <a href="{% url 'scuba_create' %}">Create a new Location</a>
+        </br>
+    {% endif %}
+</div>
+</br>
+<div class="locations-detail">
+    {% for place in scuba_detail %}
+        <h2>{{ place.location }}</h2>
+        {% if place.image %}<img src="{{ place.image }}" width="80">{% endif %}
+        <p>{{ place.description }}</p>
+        {% if user.is_staff %}
+            <a href="{% url 'scuba_edit' place.pk %}">Edit</a>
+        {% endif %}
+    {% endfor %}
+</div>
 </div>
 </main>
 {% endblock content %}
+{% comment %} <table class="locations-table">
+    <thead>
+        <tr>
+            <th>Location</th>
+            <th>Description</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for place in scuba_detail %}
+            <tr>
+                <td>{{ place.location }}</td>
+                <td>{{ place.description }}</td>
+                <td>{{ place.image }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table> {% endcomment %}

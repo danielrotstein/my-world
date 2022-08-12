@@ -11,7 +11,7 @@
             </p>
             {% if project_detail.tasks.all|length == 0 %}<p>This project has no tasks</p>{% endif %}
             {% if project_detail.tasks.all|length >= 1 %}
-                <table>
+                <table class="tasks-projects-table">
                     <thead>
                         <tr>
                             <th>Name</th>

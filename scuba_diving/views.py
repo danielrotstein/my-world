@@ -6,7 +6,10 @@ from scuba_diving.models import ScubaDiving
 
 
 # Forms
-from scuba_diving.forms import ScubaCreateForm
+from scuba_diving.forms import (
+    ScubaCreateForm,
+    ScubaUpdateForm,
+)
 
 
 # Create your views here.
@@ -52,6 +55,34 @@ def scuba_create_view(request):
     }
 
     return render(request, "interests/scuba/create.html", context)
+
+
+# -------- Scuba List View ----------------
+
+def scuba_update_view(request, pk):
+    scuba_update = ScubaDiving.objects.get(pk=pk)
+    if request.method == "POST":
+        form = ScubaUpdateForm(request.POST, instance=scuba_update)
+        if form.is_valid():
+            edit = form.save(commit=False)
+            edit.save()
+            return redirect("scuba_list")
+
+    else:
+        form = ScubaUpdateForm()
+    
+    context = {
+        "form": form
+    }
+
+    return render(request, "interests/scuba/edit.html", context)
+
+
+
+
+
+
+
 
 
 # -------- Equipment ---------------------------

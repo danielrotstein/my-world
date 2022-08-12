@@ -12,4 +12,15 @@ class ScubaCreateForm(forms.ModelForm):
         fields = [
             "location",
             "description",
+            "image",
+        ]
+
+
+class ScubaUpdateForm(forms.ModelForm):
+    class Meta:
+        model = ScubaDiving
+        fields = [
+            "location",
+            "description",
+            "image",
         ]
