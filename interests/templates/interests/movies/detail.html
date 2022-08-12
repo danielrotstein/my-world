@@ -8,14 +8,38 @@
         <button>Back</button>
     </a>
 </div>
+</br>
+</br>
+<div>
+    {% if user.is_staff %}
+        <a href="{% url 'movies_update' movies_detail.pk %}">Update</a>
+    {% endif %}
+</div>
 <div class="movies_detail">
     <h1>{{ movies_detail.name }}</h1>
     {% if movies_detail.image %}<img src="{{ movies_detail.image }}" width="200">{% endif %}
-    <h4>Overview</h4>
+    <h3>Overview</h3>
     <p>{{ movies_detail.overview }}</p>
-    <h4>Movie Info</h4>
-    <p>{{ movies_detail.movie_info }}</p>
-    <h4>My Review</h4>
+    <h3>Movie Info</h3>
+    <p>
+        <b>Starring:</b> {{ movies_detail.movie_info }}
+    </p>
+    <p>
+        <b>Year:</b> {{ movies_detail.year }}
+    </p>
+    <p>
+        <b>Genre:</b> {{ movies_detail.genre }}
+    </p>
+    <p>
+        <b>Director:</b> {{ movies_detail.director }}
+    </p>
+    <p>
+        <b>Producer:</b> {{ movies_detail.producer }}
+    </p>
+    <p>
+        <b>Run time:</b> {{ movies_detail.runtime }}
+    </p>
+    <h3>My Review</h3>
     <p>{{ movies_detail.my_review }}</p>
 </div>
 </main>
