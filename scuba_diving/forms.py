@@ -11,9 +11,19 @@ class ScubaCreateForm(forms.ModelForm):
         model = ScubaDiving
         fields = [
             "location",
-            "description",
             "image",
-        ]
+            "description",
+            "image6",
+            "best_time",
+            "languages",
+            "currency",
+            "timezone",
+            "image2",
+            "image3",
+            "image4",
+            "image5",
+            "interest",
+            ]
 
 
 class ScubaUpdateForm(forms.ModelForm):
@@ -21,6 +31,16 @@ class ScubaUpdateForm(forms.ModelForm):
         model = ScubaDiving
         fields = [
             "location",
-            "description",
             "image",
+            "description",
+            "image6",
+            "best_time",
+            "languages",
+            "currency",
+            "timezone",
+            "image2",
+            "image3",
+            "image4",
+            "image5",
+            "interest",
         ]

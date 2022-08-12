@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
     <main>
-        <div>
+        <h1>Update Location</h1>
+        <div class="scuba_update">
             <form method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button>Edit</button>
+                <button>Update</button>
             </form>
         </div>
     </main>
