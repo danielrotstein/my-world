@@ -39,12 +39,21 @@ footer {
 }
 
 
+
+/* Movies ListView */
+
 .movies_container {
     display: flex;
     margin-top: 50px;
 }
 
 
+
+/* Movies DetailView */
+
+.movies_detail {
+    margin-bottom: 100px;
+}
 
 
 
@@ -150,7 +159,7 @@ footer {
 
 
 
-/* World Map List View */
+/* World Map ListView */
 
 .worldmap {
     margin-bottom: 100px;

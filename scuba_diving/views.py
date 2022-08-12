@@ -33,7 +33,7 @@ def scuba_detail_view(request, pk):
     context = {
         "scuba_detail": scuba_detail
     }
-    print(scuba_detail)
+    
     return render(request, "interests/scuba/detail.html", context)
 
 

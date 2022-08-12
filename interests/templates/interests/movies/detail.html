@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+    <main>
+    </br>
+</br>
+<div>
+    <a href="{% url 'movies_list' %}">
+        <button>Back</button>
+    </a>
+</div>
+<div class="movies_detail">
+    <h1>{{ movies_detail.name }}</h1>
+    {% if movies_detail.image %}<img src="{{ movies_detail.image }}" width="200">{% endif %}
+    <h4>Overview</h4>
+    <p>{{ movies_detail.overview }}</p>
+    <h4>Movie Info</h4>
+    <p>{{ movies_detail.movie_info }}</p>
+    <h4>My Review</h4>
+    <p>{{ movies_detail.my_review }}</p>
+</div>
+</main>
+{% endblock content %}
