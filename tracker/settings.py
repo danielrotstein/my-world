@@ -40,6 +40,7 @@ LOGOUT_REDIRECT_URL = "login"
 # Application definition
 
 INSTALLED_APPS = [
+    'movies.apps.MoviesConfig',
     'scuba_diving.apps.ScubaDivingConfig',
     'interests.apps.InterestsConfig',
     'intro.apps.IntroConfig',
