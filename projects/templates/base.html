@@ -24,6 +24,8 @@
                     </button>
                     <div class="dropdown-content">
                         <a href="{% url 'interest_list' %}">Interests</a>
+                        <a href="{% url 'scuba_list' %}">Scuba Diving</a>
+                        <a href="{% url 'movies_list' %}">Movies</a>
                         {% if user.is_authenticated %}
                             <a href="{% url 'logout' %}">Logout</a>
                         {% endif %}
