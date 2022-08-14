@@ -19,11 +19,10 @@
                 {% endif %}
                 <div class="dropdown">
                     <button class="dropbtn">
-                        Menu
+                        <a href="{% url 'interest_list' %}">Interests</a>
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="{% url 'interest_list' %}">Interests</a>
                         <a href="{% url 'scuba_list' %}">Scuba Diving</a>
                         <a href="{% url 'movies_list' %}">Movies</a>
                         {% if user.is_authenticated %}
@@ -46,3 +45,33 @@
         </footer>
     </body>
 </html>
+{% comment %} <nav role="navigation">
+    <ul>
+        <li>
+            <a class="navbar" href="{% url 'home' %}">Home</a>
+        </li>
+        <li>
+            <a href="#">Admin</a>
+        </li>
+        <li>
+            <a href="{% url 'list_projects' %}">Projects</a>
+        </li>
+        <li>
+            <a href="#">Tasks</a>
+        </li>
+        <li>
+            <a href="#">Interests</a>
+            <ul class="dropdown">
+                <li>
+                    <a href="#">Scuba Diving</a>
+                </li>
+                <li>
+                    <a href="#">Movies</a>
+                </li>
+                <li>
+                    <a href="#">Sub-3</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav> {% endcomment %}

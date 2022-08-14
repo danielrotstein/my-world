@@ -28,6 +28,10 @@ ul {
     gap: 10px;
 }
 
+
+
+/* Footer */
+
 footer {
     display: flex;
     position: relative;
@@ -284,6 +288,8 @@ a:visited {
 .navbar {
     overflow: hidden;
     background-color: rgb(192, 229, 248);
+    justify-content: center;
+    gap: 10px;
 }
 
 .navbar a {
@@ -305,7 +311,7 @@ a:visited {
     border: none;
     outline: none;
     color: rgb(0, 0, 0);
-    padding: 14px 16px;
+    /* padding: 14px 16px; */
     background-color: inherit;
     font-family: inherit;
     margin: 0;
@@ -341,3 +347,73 @@ a:visited {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Navbar 2 */
+
+/* 
+nav {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    background: rgb(192, 229, 248);
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+li {
+    color: black;
+    background: rgb(192, 229, 248);
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+.navbar li a {
+    color: black;
+}
+
+li:hover {
+    background: rgb(125, 154, 240);
+    cursor: pointer;
+}
+
+ul li ul {
+    background: rgb(192, 229, 248);
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+}
+
+ul li:hover>ul,
+ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+ul li ul li {
+    clear: both;
+    width: 100%;
+} */
