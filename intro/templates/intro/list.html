@@ -2,11 +2,11 @@
 {% block content %}
     <main>
         <div>
-            <h1>Welcome To My World</h1>
+            <h1 class="title">Welcome To My World</h1>
             {% for item in intro_list.all %}<p>created on: {{ item.created_on|date }} // by: Daniel Rotstein</p>{% endfor %}
         </br>
         <div>
-            <img src="../danielpic.jpg" width="500" height="500">
+            <img src="../danielpic.jpg" width="200" height="200">
         </div>
         <h4>
             My name is Daniel Rotstein and Im an aspiring Software Engineer currently enrolled in a bootcamp at Hack Reactor, and this is my first introduction to a running application using knowledge of Django, Python, HTML and CSS.
